@@ -26,7 +26,6 @@ public class GetRequest01 {
         String url = "https://restful-booker.herokuapp.com/booking/3";
 
         //2. Beklenen datayi olusturmak
-
         //3. Request gonderme---send butonuna basmak
         //Response Class
         Response response = given().
