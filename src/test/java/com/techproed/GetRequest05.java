@@ -2,7 +2,7 @@ package com.techproed;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.hamcrest.Matchers;
+import static org.hamcrest.Matchers.*;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.*;
@@ -27,12 +27,13 @@ public class GetRequest05 {
 
         response.prettyPrint();
 
-        response.then().
+        response.
+                then().
                 assertThat().
                 statusCode(200).
-                body("firstname", Matchers.equalTo("Mark")).
-                body("totalprice",Matchers.equalTo(821)).
-                body("bookingdates.checkin",Matchers.equalTo("2015-05-10"));
+                body("firstname", equalTo("Mark"),
+                        "totalprice",equalTo(821),
+                        "bookingdates.checkin",equalTo("2015-05-10"));
 
 
     }
