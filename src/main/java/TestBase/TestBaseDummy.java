@@ -14,4 +14,6 @@ public class TestBaseDummy {
                      setBaseUri("http://dummy.restapiexample.com/api/v1").
                        build();
     }
+
+
 }

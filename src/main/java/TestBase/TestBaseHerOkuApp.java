@@ -13,4 +13,5 @@ public class TestBaseHerOkuApp {
                           setBaseUri("https://restful-booker.herokuapp.com/booking").
                                 build();
     }
+
 }
